@@ -40,7 +40,7 @@ function SignIn(props) {
       .doSignInWithEmailAndPassword(user.email, user.password)
       .then((authUser) => {
         setUser({ initialUser });
-        props.history.push("/dashboard");
+        props.history.push("/home");
       })
       .catch((error) => {
         setUser({ ...user, error: error.message });
@@ -103,6 +103,7 @@ function SignIn(props) {
               disabled={isValid}
             >
               Sign In
+              {/* <Link to="/home"></Link> */}
             </Button>
             <Grid container>
               <Grid item xs>

@@ -47,7 +47,7 @@ function SignUp(props) {
       })
       .then((authUser) => {
         setUser(initialUser);
-        props.history.push("/dashboard");
+        props.history.push("/home");
       })
       .catch((error) => {
         setUser({ ...user, error: error.message });
